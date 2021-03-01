@@ -60,6 +60,7 @@ const countTime = () => {
         $timer.innerText = timer;    
         if(timer === 0) {
             clearInterval(timeFunc);
+            $gameBoard.classList.add('compare');
             Swal.fire({
                 // icon: 'error',
                 title: 'Game Over',
@@ -93,6 +94,7 @@ const checkGameState = () => {
     console.log(openCards);
     if (openCards === (animalArray.length * 2)) {
         clearInterval(timeFunc);
+        $gameBoard.classList.add('compare');
         Swal.fire({
             position: 'center',
             title: 'Good Job',
@@ -134,6 +136,7 @@ const calcScore = () => {
 }
 
 const printCards = (array) => {
+    $gameBoard.classList.add('compare');
     $gameBoard.innerHTML="";
     const shuffleArray = shuffle([...array, ...array]);
     shuffleArray.forEach(card => {
@@ -158,6 +161,7 @@ const initialValues = () => {
     $score.innerText = score;
     steps = 0;
     $steps.innerText = steps;
+    $gameBoard.classList.remove('compare');
 }
     
 const startGame = () => {
