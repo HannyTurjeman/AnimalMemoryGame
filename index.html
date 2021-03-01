@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elior Memory Game</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <base href="./">
+
+    <link rel="stylesheet" href="style.css">
+    <script async src="script.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <audio id="audio"></audio>
+        <header>
+            <h1>Memory Game</h1>
+            <ul id="dashboard">
+                <li>Score: <span id="score">3</span></li>
+                <li>Steps: <span id="steps">0</span></li>
+                <li>Timer: <span id="timer">40</span></li>
+            </ul>
+        </header>
+        <ul id="board">
+
+        </ul>
+        <button id="restart">Restart</button>
+    </div> 
+</body>
+</html>
